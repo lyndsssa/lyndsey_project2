@@ -17,10 +17,10 @@
     <form action="/store" method="POST">
 
 <div class="storeProducts">
-
+<!--
 
 <h2>Pink Flamingo Float</h2>
-<a href="/store/<%= allProducts.id %>"> <img class="productImg" src="https://www.pbteen.com/ptimgs/rk/images/dp/wcm/201849/0418/img11c.jpg" alt"pink flamingo" > </a>
+<a href="/store/  allProducts.id %>"> <img class="productImg" src="https://www.pbteen.com/ptimgs/rk/images/dp/wcm/201849/0418/img11c.jpg" alt"pink flamingo" > </a>
   <br>
   <h3>
   <br>Size: One size, Inflatiable pool float
@@ -107,14 +107,17 @@
   <br>79.00
   <br>6 left in stock
   <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
+</h3> -->
 
 <div>
-<% for(i=0; i<allProducts.length;i++){ %>
-  <h2><a href="/store/<%=allProducts[i].id%>"></h2>
-    <h3><%=allProducts[i].price%></h3>
-    <h3><%=allProducts[i].quanity%></h3>
-<%=console.log(allProducts[i])%>
+<% for(let i = 0; i < allProducts.length;i++){ %>
+  <h2>
+    <a href="/store/<%=allProducts[i].id%>"></h2>
+    <h3><%=products[i].name%></h3>
+    <h3><%=products[i].img%></h3>  
+    <h3><%=products[i].price%></h3>
+    <h3><%=products[i].quanity%></h3>
+<%=console.log(products[i])%>
 <% } %>
 </div>
 

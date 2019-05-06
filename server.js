@@ -3,8 +3,9 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const Floaties = require('./models/store.js');
+const products = require('./models/products.js');
 //const methodOverride = require('method-override');
-
+//console.log(Floaties)
 ////connect to mongoose///
 mongoose.connect('mongodb://localhost:27017/floatStore', {useNewUrlParser: true});
 mongoose.connection.once('open', ()=> {
@@ -63,13 +64,10 @@ app.get('/store/edit', (req, res)=>{
 });
 
 //////////////SEED ROUTE///////////////
-// app.get('/seed/', (req, res)=>{
-//   product.create([)
-//   res.send('');{
-//
-//   }
-//
-// });
+app.get('/seed/', (req, res)=>{
+  Floaties.create(products, ()=>{  res.send('')})
+
+});
 
 ////port//////
 app.listen(3000, ()=>{

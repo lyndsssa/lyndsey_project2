@@ -1,7 +1,7 @@
-const Floaties = [
- //module.exports = [
+//const Floaties = [
+ module.exports = [
 
-{name: "Pink Flamingo Float", description: "cy", img: "https://www.pbteen.com/ptimgs/rk/images/dp/wcm/201849/0418/img11c.jpg", price: "49.00", quanity: "6"},
+{name: "Pink Flamingo Float", description: "Inflatiable pool float", img: "https://www.pbteen.com/ptimgs/rk/images/dp/wcm/201849/0418/img11c.jpg", price: "49.00", quanity: "6"},
 
 {name: "Avocado Float", description: "Inflatiable pool floaty", img: "https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Bigmouth-Inc.-Giant-Avocado-Pool-Float-_278888-front-US.jpg", price: "49.00", quanity: "6"},
 
@@ -15,7 +15,7 @@ const Floaties = [
 
 {name: "Mega Pegasus Float", description: "Inflatiable pool floaty", img: "https://images-na.ssl-images-amazon.com/images/I/41S-jCWcpXL._SX425_.jpg", price: "59.00", quanity: "6"},
 
-{name: "Pink Glitter Float", description: "Inflatiable pool floaty", img: "https://images-na.ssl-images-amazon.com/images/I/51WjGdSuh2L._SX466_.jpg", price: "49.00", quanity: "6"}
+{name: "Pink Glitter Float", description: "Inflatiable pool floaty", img: "https://images-na.ssl-images-amazon.com/images/I/51WjGdSuh2L._SX466_.jpg", price: "49.00", quanity: "6"},
 
 {name: "Clear Rainbow Chair", description: "Inflatiable pool floaty", img: "https://images.horchow.com/ca/1/product_assets/H/C/4/B/L/HCHC4BL_cu.jpg", price: "79.00", quanity: "6"}
 
