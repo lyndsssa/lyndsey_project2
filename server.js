@@ -45,6 +45,7 @@ app.get('/store/:id', (req, res)=>{
 ///////////////INDEX ROUTE/////////////
 app.get('/store/', (req, res)=>{
   Floaties.find({}, (error, allFloats)=>{
+    console.log(allFloats)
     res.render('index.ejs',{
       allProducts: allFloats
     });
@@ -65,7 +66,9 @@ app.get('/store/edit', (req, res)=>{
 
 //////////////SEED ROUTE///////////////
 app.get('/seed/', (req, res)=>{
-  Floaties.create(products, ()=>{  res.send('')})
+  Floaties.create(products, (error, createdProducts)=>{
+console.log(error)
+      res.send('')})
 
 });
 

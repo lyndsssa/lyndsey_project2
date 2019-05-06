@@ -7,128 +7,43 @@
     <title>Index page</title>
   </head>
   <body>
+      <a href="/store/edit"> <input type="submit" name="" value="My Cart"/></a>
       <h1>Instagram Worthy Pool Floaties</h1>
-
-    <nav>
-        <a href="/store/edit">My Cart </a><br>
-
-      </nav>
 
     <form action="/store" method="POST">
 
 <div class="storeProducts">
-<!--
 
-<h2>Pink Flamingo Float</h2>
-<a href="/store/  allProducts.id %>"> <img class="productImg" src="https://www.pbteen.com/ptimgs/rk/images/dp/wcm/201849/0418/img11c.jpg" alt"pink flamingo" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>49.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
 
-<h2>Avocado Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Bigmouth-Inc.-Giant-Avocado-Pool-Float-_278888-front-US.jpg" alt"avocado pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>49.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
+<div> <% for(let i = 0; i < allProducts.length;i++){ %>
 
-<h2>Sprinkle Donut Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://images-na.ssl-images-amazon.com/images/I/613qTUIdYUL._SX466_.jpg" alt"Donut pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>69.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
-
-<h2>Oyster Shell Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://i.pinimg.com/originals/1f/64/d4/1f64d415c7eff1c060156e253e742390.jpg" alt"Oyster shell pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>98.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
-
-<h2>Angel Wings Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://images-eu.ssl-images-amazon.com/images/I/51okuiE4JSL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_.jpg" alt"Wings pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>139.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
-
-<h2>Mermaid Tail Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://images-na.ssl-images-amazon.com/images/I/81tdz1yHYrL._SX425_.jpg" alt"Mermaid pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>39.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
-
-<h2>Pink Glitter Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://images-na.ssl-images-amazon.com/images/I/51WjGdSuh2L._SX466_.jpg" alt"Glitter pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>49.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
-
-<h2>Mega Pegasus Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://images-na.ssl-images-amazon.com/images/I/41S-jCWcpXL._SX425_.jpg" alt"Mego Pegasus pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>129.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3>
-
-<h2>Clear Rainbow Lounge Float</h2>
-<a href="/store/show"> <img class="productImg" src="https://images.horchow.com/ca/1/product_assets/H/C/4/B/L/HCHC4BL_cu.jpg" alt"rainbow lounge pool float" > </a>
-  <br>
-  <h3>
-  <br>Size: One size, Inflatiable pool float
-  <br>79.00
-  <br>6 left in stock
-  <br><a href="/store/edit"><input type="submit" name="" value="Add To Cart"/></a><br><br/>
-</h3> -->
-
-<div>
-<% for(let i = 0; i < allProducts.length;i++){ %>
-  <h2>
-    <a href="/store/<%=allProducts[i].id%>"></h2>
-    <h3><%=products[i].name%></h3>
-    <h3><%=products[i].img%></h3>  
-    <h3><%=products[i].price%></h3>
-    <h3><%=products[i].quanity%></h3>
-<%=console.log(products[i])%>
+    <h2><a href="/store/<%=allProducts[i].id%>"></h2>
+    <h2 class="name"><%=allProducts[i].name%></h2>
+    <a href="#"><img class="productImg" src="<%=allProducts[i].img%>"></a>
+    <h3> $<%=allProducts[i].price%></h3>
+    <h3>In Stock: <%=allProducts[i].quanity%></h3>
+      <h3>DESCRIPTION</h3>
+      <ul>
+        <li>
+          Vinyl pool float
+        <li>
+          Wipe clean
+        <li>
+          Not to be used as a flotation device for rescue
+        <li>
+          Imported
+        <li>
+          Includes repair patch in case of punctures
+        </li>
+        </ul>
+        
+<%=console.log(allProducts[i])%>
 <% } %>
 </div>
 
-  </div>
-
-
-
-    </form>
     <footer>
       <a class= "customize" href="/store/new">Customize Your Own Pool Float</a>
-      <br>
+
       <br>
       Subscribe to our site: <input type="text" name="email" />
       <input type="submit" name="" value="Submit"/><br>

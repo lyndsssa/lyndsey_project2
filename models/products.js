@@ -3,7 +3,7 @@
 
 {name: "Pink Flamingo Float", description: "Inflatiable pool float", img: "https://www.pbteen.com/ptimgs/rk/images/dp/wcm/201849/0418/img11c.jpg", price: "49.00", quanity: "6"},
 
-{name: "Avocado Float", description: "Inflatiable pool floaty", img: "https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Bigmouth-Inc.-Giant-Avocado-Pool-Float-_278888-front-US.jpg", price: "49.00", quanity: "6"},
+{name: "Avocado Float", description: "Inflatiable pool floaty", img: "https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Bigmouth-Inc.-Giant-Avocado-Pool-Float-_278888-front-US.jpg", price: "Price: 49.00", quanity: "In Stock: 6"},
 
 {name: "Sprinkle Donut Float", description: "Inflatiable pool floaty", img: "https://images-na.ssl-images-amazon.com/images/I/613qTUIdYUL._SX466_.jpg", price: "69.00", quanity: "6"},
 

@@ -26,6 +26,11 @@ footer{
 
 }
 
+.name{
+  text-decoration: none;
+}
+
+
 .productImg{
   display: inline-block;
 
