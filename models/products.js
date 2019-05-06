@@ -17,7 +17,7 @@ const Floaties = [
 
 {name: "Pink Glitter Float", description: "Inflatiable pool floaty", img: "https://images-na.ssl-images-amazon.com/images/I/51WjGdSuh2L._SX466_.jpg", price: "49.00", quanity: "6"}
 
-
+{name: "Clear Rainbow Chair", description: "Inflatiable pool floaty", img: "https://images.horchow.com/ca/1/product_assets/H/C/4/B/L/HCHC4BL_cu.jpg", price: "79.00", quanity: "6"}
 
 ];
 

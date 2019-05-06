@@ -2,18 +2,59 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel = 'stylesheet' href='app.css' type ='text/css'>
+    <link rel = 'stylesheet' href='/app.css' type ='text/css'>
     <title>new page</title>
   </head>
+  <a href="/store/edit"> <input type="submit" name="" value="View My Cart"/></a><br>
   <body>
-    <h1>Add your pool floats to our site!</h1>
+    <h1>Customize your own pool float!</h1>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="https://images.horchow.com/ca/3/product_assets/H/B/B/T/K/HCHBBTK_mu.jpg" style="width:100%">
+  </div>
+<div class="mySlides fade">
+    <img src="https://www.pngkit.com/png/detail/550-5506779_mermaid-pattern-pool-float-by-mimosa-inc-inflatable.png" style="width:100%">
+</div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br>
+
+
+    <h2>It's easy, fill out the form below and add to your cart.</h2>
+    <h3>Please note the photos shown on page are samples from recent orders. All custom floats are the basic donut style and one size.</h3>
+    <h4>DESCRIPTION</h4>
+    <ul>
+      <li>
+        All Floaties are FINAL SALE
+      <li>
+        Vinyl pool float
+      <li>
+        Wipe clean
+      <li>
+        Measures approx 50"cin diameter
+      <li>
+        Not to be used as a flotation device for rescue
+      <li>
+        Imported
+        </li>
+          </ul>
+
     <form action="/store" method="POST">
 
-        Item: <input type="text" name="title" /><br/><br>
-        Price: <input type="text" name="entry" /><br/><br>
-        Quanity: <input type="text" name="entry" /><br/><br>
-        <input type="submit" name="" value="Add Item"/><br><br>
-        <a href="/store/edit"><input type="submit" name="" value="My Cart"/></a><br>
+        Color: <input type="text" name="Color" /><br/><br>
+        Pattern: <input type="text" name="Pattern" /><br/><br>
+        Glitter: <input type="checkbox" name="Gliter Color" /><br/>
+        Pokadots: <input type="checkbox" name="Gliter Color" /><br/><br>
+        <a href="/store/edit"> <input type="submit" name="" value="Add to Cart"/></a><br><br>
+        <a href="/store/edit"> <input type="submit" name="" value="View My Cart"/></a><br>
     </form>
   </body>
 </html>
