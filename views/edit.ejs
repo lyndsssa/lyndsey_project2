@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8">
     <link rel = 'stylesheet' href='/app.css' type ='text/css'>
-    <title>edit page</title>
+    <title>show ejs</title>
   </head>
   <body>
-<h1>Here you can buy and edit your cart</h1>
+    <h1> Edit your cart or go to checkout </h1>
+<nav>
+    <a href="/store/show"> <input type="submit" name="" value="Checkout"/></a><br><br>
+
+    <a href="/store/"> <input type="submit" name="" value="Back to All Items"/></a><br>
+    <br>
+
+    <form action="/store"; %>?_method="DELETE" method="POST">
+    <a href="/store/"> <input type="submit" value="Delete from cart"/></a><br>
+    </form>
+    <br>
+
   </body>
 </html>

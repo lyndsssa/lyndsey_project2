@@ -9,7 +9,7 @@
 
 {name: "Oyster Shell Float", description: "Inflatiable pool floaty", img: "https://i.pinimg.com/originals/1f/64/d4/1f64d415c7eff1c060156e253e742390.jpg", price: "98.00", quanity: "6"},
 
-{name: "Llama Float", description: "Inflatiable pool floaty", img: "https://images-eu.ssl-images-amazon.com/images/I/51okuiE4JSL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_.jpg", price: "139.00", quanity: "6"},
+{name: "Angel Wings Float", description: "Inflatiable pool floaty", img: "https://images-eu.ssl-images-amazon.com/images/I/51okuiE4JSL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_.jpg", price: "139.00", quanity: "6"},
 
 {name: "Mermaid Tail Float", description: "Inflatiable pool floaty", img: "https://images-na.ssl-images-amazon.com/images/I/81tdz1yHYrL._SX425_.jpg", price: "39.00", quanity: "6"},
 

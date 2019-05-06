@@ -29,7 +29,7 @@ app.post('/store/', (req, res)=>{
   } else {
     req.body.addToCart = false;
   }
-  res.redirect('/store/');
+  res.redirect('/store/edit');
 
 });
 
@@ -63,6 +63,13 @@ app.get('/store/show', (req, res)=>{
 app.get('/store/edit', (req, res)=>{
   res.render('edit.ejs');
 });
+
+//////////////ADD to CART///////////////////////
+// app.get('/store/edit', (req, res)=>{
+//   Floaties.update(req.param, (error, allFloats)
+//   res.render('edit.ejs');
+// })
+
 
 //////////////SEED ROUTE///////////////
 app.get('/seed/', (req, res)=>{

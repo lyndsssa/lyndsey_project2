@@ -6,15 +6,17 @@
     <link rel = 'stylesheet' href='/app.css' type ='text/css'>
     <title>Index page</title>
   </head>
+<header>
+  <a href="/store/edit"> <input type="submit" name="" value="My Cart"/></a>
+  <br>
+   <img class="headPhoto" src="https://i.pinimg.com/originals/cb/f2/f5/cbf2f537ad7261f377e88c5d58dd0693.jpg">
+    </header>
   <body>
-      <a href="/store/edit"> <input type="submit" name="" value="My Cart"/></a>
-      <h1>Instagram Worthy Pool Floaties</h1>
+      <h1>Instagram Worthy Pool Floats</h1>
+      <h2 class="slogan">Everything you need for a perfect summer photo.</h2>
 
     <form action="/store" method="POST">
-
 <div class="storeProducts">
-
-
 <div> <% for(let i = 0; i < allProducts.length;i++){ %>
 
     <h2><a href="/store/<%=allProducts[i].id%>"></h2>
@@ -36,18 +38,14 @@
           Includes repair patch in case of punctures
         </li>
         </ul>
-        
+    <a class="addToCart" href="/store/edit"> <input type="submit" name="" value="Add To Cart"/></a>
 <%=console.log(allProducts[i])%>
 <% } %>
 </div>
-
+</div>
     <footer>
       <a class= "customize" href="/store/new">Customize Your Own Pool Float</a>
-
-      <br>
-      Subscribe to our site: <input type="text" name="email" />
-      <input type="submit" name="" value="Submit"/><br>
-    </footer>
+  </footer>
 
   </body>
 </html>
