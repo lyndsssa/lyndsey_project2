@@ -3,10 +3,12 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const Floaties = require('./models/store.js');
+const Blog = require('./models/blog.js');
+const Order = require('./models/orderForm.js');
 const products = require('./models/products.js');
 
-//const methodOverride = require('method-override');
-//console.log(Floaties)
+const methodOverride = require('method-override');
+
 ////connect to mongoose///
 mongoose.connect('mongodb://localhost:27017/floatStore', {useNewUrlParser: true});
 mongoose.connection.once('open', ()=> {
@@ -22,24 +24,65 @@ mongoose.connection.once('open', ()=> {
 ///////////////.use////////////////////
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
-//app.use(methodOverride('_method'));
+app.use(express.urlencoded({extended:false}));
+app.use(methodOverride('_method'));
 
 ///////////////////////////////////
 /////////////NEW ROUTE////////////
 app.get('/store/new', (req, res)=>{
-  res.render('new.ejs');
+  Order.find({},(err, newOrder) => {
+  res.render('new.ejs', {
+    newOrders:newOrder
+  })
+});
 });
 
+// app.use((req,res, next)=>{
+//   console.log('I run new routes');
+//   next();
+// });
+
+app.post('/store/new', (req, res)=>{
+  console.log("store new post route hit")
+  if(req.body.newFloat === 'on'){
+    req.body.newFloat = true;
+  } else {
+    req.body.newFloat = false;
+  }
+  Order.create(req.body, (err, newOrder)=>{
+    console.log(newOrder)
+    res.redirect('/store/blog/yourOrder');
+  });
+
+  //console.log(Floaties);
+//   res.send('data recieved');
+ });
 ///////////////////////////////////////
 ////////////CREATE ROUTE//////////////
-app.post('/store/', (req, res)=>{
-  if(req.body.addToCart === 'on'){
-    req.body.addToCart = true;
-  } else {
-    req.body.addToCart = false;
-  }
-  res.redirect('/store/edit');
+app.get('/store/blog', (req, res)=>{
+    Blog.find({},(err, newBlog) => {
+    res.render('blog.ejs', {
+      newPost:newBlog
+    })
+  });
+});
 
+// app.use((req,res, next)=>{
+//   console.log('middlewear');
+//   next();
+// });
+
+app.post('/store/blog', (req, res)=>{
+  console.log("inside store route")
+  if(req.body.addToBlog === 'on'){
+    req.body.addToBlog = true;
+  } else {
+    req.body.addToBlog = true;
+  }
+  Blog.create(req.body, ()=>{
+    console.log(req.body)
+  res.redirect('/store/blog');
+})
 });
 
 ///////////////////////////////////////
@@ -73,15 +116,45 @@ app.get('/store/', (req, res)=>{
 
 ////////////////////////////////////////
 /////////////////EDIT ROUTE////////////
-app.get('/store/edit', (req, res)=>{
-  res.render('edit.ejs');
+app.get('/store/yourOrder/:id/edit', (req, res)=>{
+  Order.findById(req.params.id, (err, orders) => {
+    console.log(orders)
+  res.render(
+    'edit.ejs', {
+      //newOrders: orders[req.params.id]
+    })
+  });
 });
 
-////////////////////CART.ejs ROUTE/////////////////
+////////////////////Blog ROUTE/////////////////
 app.get('/store/blog', (req, res)=>{
   res.render('blog.ejs');
 });
 
+//////////////////ORDER ROUTE///////////////
+app.get('/store/blog/yourOrder', (req, res)=>{
+  Order.find({},(err, newOrder) => {
+    console.log(newOrder)
+  res.render('yourOrder.ejs', {
+
+    newOrders:newOrder
+
+  });
+})
+});
+app.post('/store/blog/yourOrder', (req, res)=>{
+  console.log("your order recieved")
+  if(req.body.newFloat === 'on'){
+    req.body.newFloat = true;
+  } else {
+    req.body.newFloat = false;
+  }
+  Order.create(req.body, ()=>{
+    console.log(req.body)
+  res.redirect('/store/blog/yourOrder');
+})
+
+});
 //////////////ADD to CART///////////////////////
 // app.get('/store/edit', (req, res)=>{
 //   Floaties.update(req.param, (error, allFloats)

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel = 'stylesheet' href='/app.css' type ='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>show ejs</title>
   </head>
   <body>
@@ -10,7 +12,7 @@
     <nav>
       <a href="/store/">SHOP</a>
       <a href="/store/blog">BLOG</a>
-      <a href="/store/new">CREATE YOUR OWN</a>
+      <a href="/store/new">CUSTOMIZE YOUR OWN</a>
     </nav>
     <br>
     <br>
@@ -35,7 +37,7 @@
         </ul>
 
     <%=console.log(allProducts)%>
-    <a class="addToCart" href="/store/edit"> <input type="submit" name="" value="Add To Cart"/></a>
+    <a class="addToCart" href="/store/newOrder"> <input type="submit" name="" value="Add To Favorites"/></a>
 </div>
 
   </body>

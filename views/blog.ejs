@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
       <link rel = 'stylesheet' href='/app.css' type ='text/css'>
+
     <title>store blog</title>
   </head>
   <nav>
     <a href="/store/">SHOP</a>
     <a href="/store/blog">BLOG</a>
-    <a href="/store/new">CREATE YOUR OWN</a>
+    <a href="/store/new">CUSTOMIZE YOUR OWN</a>
   </nav>
   <body>
     <h1>IG Float Blog</h1>
@@ -18,8 +19,16 @@
     <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p><h3>
 
-      <form action="/store"; %>?_method="DELETE" method="POST">
-      <a href="/store/"> <input type="submit" value="Delete Post"/></a><br>
+<%for(let i = newPost.length-1; i < newPost.length;i++){ %>
+  <h3><%= newPost[newPost.length-1].story %><h3>
+  <% console.log(newPost[i].story) %>
+<% } %>
+      <form action="/store/blog" method="POST">
+      YOUR FLOAT STORY: <div class="textbox"><input type="text" name="story" /></div><br>
+      <a class="addToBlog" href="/store/blog"> <input type="submit" name="" value="CREATE"/></a>
+
+      <form action="/store/blog"; %>?_method="DELETE" method="POST">
+      <a href="/store/blog"> <input type="submit" value="Delete Post"/></a><br>
       </form>
 
   </body>

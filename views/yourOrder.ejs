@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel = 'stylesheet' href='/app.css' type ='text/css'>
+
+    <title>store blog</title>
+  </head>
+  <nav>
+    <a href="/store/">SHOP</a>
+    <a href="/store/blog">BLOG</a>
+    <a href="/store/new">CUSTOMIZE YOUR OWN</a>
+  </nav>
+  <body>
+    <h1>YOUR ORDER</h1>
+    <%for(let i = newOrders.length-1; i < newOrders.length;i++){ %>
+      <%= newOrders[i]._id %>
+      <h3>Color choice: <%= newOrders[i].Color %><h3>
+      <h3>Text on floaty: <%= newOrders[i].Text %><h3>
+      <h3>Contact information: <%= newOrders[i].Email %><h3>
+      <% console.log(newOrders[i].Color) %>
+    <% } %>
+
+    <a href="/store/yourOrder/<%=newOrders.length; %>/edit">EDIT</a>
+
+    </body>
+    </html>

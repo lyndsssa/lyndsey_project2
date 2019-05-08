@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel = 'stylesheet' href='/app.css' type ='text/css'>
+  <link rel = 'stylesheet' href='/app.css' type ='text/css'>
     <title>edit ejs</title>
   </head>
   <body>
@@ -10,16 +10,17 @@
   <nav>
     <a href="/store/">HOME</a>
     <a href="/store/blog">BLOG</a>
-    <a href="/store/new">CREATE YOUR OWN</a>
+    <a href="/store/new">CUSTOMIZE YOUR OWN</a>
   </nav>
 
-    <a href="/store/"> <input type="submit" name="" value="Back to All Items"/></a><br>
-    <br>
 
-    <form action="/store"; %>?_method="DELETE" method="POST">
-    <a href="/store/"> <input type="submit" value="Delete from cart"/></a><br>
-    </form>
-    <br>
 
+  <form>
+    Color: <input type="text" name="Color" value="<%=newOrders.color%>" /><br/>
+    Text: <input type="text" name="Text" value="<%=newOrders.text%>" /><br/>
+    Email: <input type="text" name="Email" value="<%=newOrders.email%>" /><br/><br>
+
+    <input type="submit" name="" value="UPDATE CHANGES"/></a>
+  </form>
   </body>
 </html>
