@@ -7,11 +7,13 @@ const Blog = require('./models/blog.js');
 const Order = require('./models/orderForm.js');
 const products = require('./models/products.js');
 const PORT = process.env.PORT || 3000;
-
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/floatStore'
 const methodOverride = require('method-override');
 
+
+///
 ////connect to mongoose///
-mongoose.connect('mongodb://localhost:27017/floatStore', {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 mongoose.connection.once('open', ()=> {
   console.log('connected to mongo');
 });
