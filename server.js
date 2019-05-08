@@ -6,6 +6,7 @@ const Floaties = require('./models/store.js');
 const Blog = require('./models/blog.js');
 const Order = require('./models/orderForm.js');
 const products = require('./models/products.js');
+const PORT = process.env.PORT || 3000;
 
 const methodOverride = require('method-override');
 
@@ -171,6 +172,7 @@ console.log(error)
 });
 
 ////port//////
-app.listen(3000, ()=>{
-  console.log("I am listening");
-});
+// app.listen(3000, ()=>{
+//   console.log("I am listening");
+// });
+app.listen(PORT, () => console.log( 'Listening on port:', PORT));
