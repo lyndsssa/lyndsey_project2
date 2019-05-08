@@ -5,10 +5,13 @@
     <link rel = 'stylesheet' href='/app.css' type ='text/css'>
     <title>new page</title>
   </head>
-  <nav>
-  <a href="/store/edit"> <input type="submit" name="" value="View My Cart"/></a><br>
-  <a href="/store/"> <input type="submit" name="" value="Back To Results"/></a><br>
-  </nav>
+
+    <nav>
+      <a href="/store/">SHOP</a>
+      <a href="/store/blog">BLOG</a>
+      <a href="/store/new">CREATE YOUR OWN</a>
+    </nav>
+
   <body>
     <h1>Customize your own pool float!</h1>
 
@@ -41,8 +44,8 @@
 </div>
 
   <br>
-    <h2>It's easy, fill out the form below and add to your cart.</h2>
-    <h3>Please note the photos shown on page are samples from recent orders. All custom floats are the basic donut style and one size.</h3>
+    <h2>It's easy, fill out the form below and submit. Please do not forget the email address so we can reach out to you once your order has been accepted! </h2>
+    <h3>Please note the photos shown on page are samples from recent orders. All custom floats are the basic donut style and one size. Once you recieve the conformation email you will be provided with a link to your updated cart for checkout.</h3>
     <h4>DESCRIPTION</h4>
     <ul>
       <li>
@@ -61,20 +64,20 @@
         Text can be up to three words & font will be  Sans Serif
         </li>
           </ul>
-
+      <h3> $45 </h3>
     <form action="/store" method="POST">
 
-        Pattern: <input type="text" name="Pattern" /><br/><br>
+      <div class="checkbox">
+        Cursive: <input type="checkbox" name="font option" />
+        All CAPS: <input type="checkbox" name="font option" />
+        Glitter: <input type="checkbox" name="Gliter Color" />
+        Pokadots: <input type="checkbox" name="Pokadots" /><br/><br>
+
         Color: <input type="text" name="Color" /><br/><br>
         Text: <input type="text" name="Text" /><br/><br>
-
-        Cursive: <input type="checkbox" name="font option" /><br/>
-        All CAPS: <input type="checkbox" name="font option" /><br/>
-        Glitter: <input type="checkbox" name="Gliter Color" /><br/>
-        Pokadots: <input type="checkbox" name="Gliter Color" /><br/>
-        <h3> $45 </h3>
-        <a class="addToCart" href="/store/edit"> <input type="submit" name="" value="Add to Cart"/></a><br><br>
-
+        Email: <input type="text" name="Email" /><br/>
+        <a class="addToCart" href="/store/edit"> <input type="submit" name="" value="SUBMIT"/></a>
+      </div>
     </form>
   </body>
 </html>

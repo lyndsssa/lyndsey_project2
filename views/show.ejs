@@ -6,17 +6,37 @@
     <title>show ejs</title>
   </head>
   <body>
-    <h1> Edit your cart or go to checkout </h1>
-<nav>
-    <a href="/store/show"> <input type="submit" name="" value="Checkout"/></a><br><br>
-
-    <a href="/store/"> <input type="submit" name="" value="Back to All Items"/></a><br>
+    <h1>Float Details</h1>
+    <nav>
+      <a href="/store/">SHOP</a>
+      <a href="/store/blog">BLOG</a>
+      <a href="/store/new">CREATE YOUR OWN</a>
+    </nav>
+    <br>
     <br>
 
-    <form action="/store"; %>?_method="DELETE" method="POST">
-    <a href="/store/"> <input type="submit" value="Delete from cart"/></a><br>
-    </form>
-    <br>
+<div>
+  <h2><%=allProducts.name%></h2>
+  <img class="productImg" src="<%=allProducts.img%>"></img>
+  <h3>$<%=allProducts.price%></h3>
+  <h3>DESCRIPTION</h3>
+      <ul>
+        <li>
+          Vinyl pool float
+        <li>
+          Wipe clean
+        <li>
+          Not to be used as a flotation device for rescue
+        <li>
+          Imported
+        <li>
+          Includes repair patch in case of punctures
+        </li>
+        </ul>
+
+    <%=console.log(allProducts)%>
+    <a class="addToCart" href="/store/edit"> <input type="submit" name="" value="Add To Cart"/></a>
+</div>
 
   </body>
 </html>

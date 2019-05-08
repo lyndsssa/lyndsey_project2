@@ -7,7 +7,11 @@
     <title>Index page</title>
   </head>
 <header>
-  <a href="/store/edit"> <input type="submit" name="" value="My Cart"/></a>
+  <nav>
+  <a href="/store/">SHOP</a>
+  <a href="/store/blog">BLOG</a>
+  <a href="/store/new">CREATE YOUR OWN</a>
+  </nav>
   <br>
    <img class="headPhoto" src="https://i.pinimg.com/originals/cb/f2/f5/cbf2f537ad7261f377e88c5d58dd0693.jpg">
     </header>
@@ -21,24 +25,10 @@
 
     <h2><a href="/store/<%=allProducts[i].id%>"></h2>
     <h2 class="name"><%=allProducts[i].name%></h2>
-    <a href="#"><img class="productImg" src="<%=allProducts[i].img%>"></a>
+    <a href="/store/show/<%=allProducts[i].id%>"><img class="productImg" src="<%=allProducts[i].img%>"></a>
     <h3> $<%=allProducts[i].price%></h3>
     <h3>In Stock: <%=allProducts[i].quanity%></h3>
-      <h3>DESCRIPTION</h3>
-      <ul>
-        <li>
-          Vinyl pool float
-        <li>
-          Wipe clean
-        <li>
-          Not to be used as a flotation device for rescue
-        <li>
-          Imported
-        <li>
-          Includes repair patch in case of punctures
-        </li>
-        </ul>
-    <a class="addToCart" href="/store/edit"> <input type="submit" name="" value="Add To Cart"/></a>
+
 <%=console.log(allProducts[i])%>
 <% } %>
 </div>
