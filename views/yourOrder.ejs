@@ -18,10 +18,11 @@
       <h3>Color choice: <%= newOrders[i].Color %><h3>
       <h3>Text on floaty: <%= newOrders[i].Text %><h3>
       <h3>Contact information: <%= newOrders[i].Email %><h3>
+        <a href="/store/yourOrder/<%=newOrders[i]._id %>/edit">EDIT</a>
       <% console.log(newOrders[i].Color) %>
     <% } %>
 
-    <a href="/store/yourOrder/<%=newOrders.length; %>/edit">EDIT</a>
+
 
     </body>
     </html>

@@ -124,7 +124,8 @@ app.get('/store/yourOrder/:id/edit', (req, res)=>{
     console.log(orders)
   res.render(
     'edit.ejs', {
-      //newOrders: orders[req.params.id]
+      newOrders: orders
+
     })
   });
 });
