@@ -2,10 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   flex-flow: row wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   padding: 20px 150px;
   height: 25%;
   width: 50%;
+  
 }
 .productImg{
   display: inline-block;
