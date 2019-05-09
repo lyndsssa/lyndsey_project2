@@ -5,19 +5,19 @@
   <link rel = 'stylesheet' href='/app.css' type ='text/css'>
     <title>edit ejs</title>
   </head>
+  <ul>
+    <li><a href="/store/">SHOP</a></li>
+    <li><a href="/store/blog">BLOG</a></li>
+    <li><a href="/store/new">CUSTOMIZE YOUR OWN</a></li>
+  </ul>
+<img class="headPhoto" src="https://i.pinimg.com/originals/cb/f2/f5/cbf2f537ad7261f377e88c5d58dd0693.jpg">
   <body>
-    <h1>EDIT Page</h1>
-  <nav>
-    <a href="/store/">HOME</a>
-    <a href="/store/blog">BLOG</a>
-    <a href="/store/new">CUSTOMIZE YOUR OWN</a>
-  </nav>
+    <h1>Edit Your Order</h1>
 
 
-
-  <form>
+  <form class="editForm">
     Color: <input type="text" name="Color" value="<%=newOrders.Color%>" /><br/>
-    Text: <input type="text" name="Text" value="<%=newOrders.Text%>" /><br/>
+    Text:  <input type="text" name="Text" value="<%=newOrders.Text%>" /><br/>
     Email: <input type="text" name="Email" value="<%=newOrders.Email%>" /><br/><br>
 
     <input type="submit" name="" value="UPDATE CHANGES"/></a>

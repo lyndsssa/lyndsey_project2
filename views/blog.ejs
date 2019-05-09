@@ -6,21 +6,39 @@
 
     <title>store blog</title>
   </head>
-  <nav>
-    <a href="/store/">SHOP</a>
-    <a href="/store/blog">BLOG</a>
-    <a href="/store/new">CUSTOMIZE YOUR OWN</a>
-  </nav>
+
+  <ul>
+    <li><a href="/store/">SHOP</a></li>
+    <li><a href="/store/blog">BLOG</a></li>
+    <li><a href="/store/new">CUSTOMIZE YOUR OWN</a></li>
+  </ul>
+  
+  <img class="headPhoto" src="https://www.swimmingpool.com/blog/images/open-graph/2018-07-10-pool-float-buyers-guide.jpg">
+
   <body>
     <h1>IG Float Blog</h1>
     <h2>Here you can read all about our products and share your own float stories!</h2>
-    <h3>WHY WE WANT TO HEAR YOUR FLOAT STORY
-    <br>
+    <h3 class="pTitle">WHY WE WANT TO HEAR YOUR FLOAT STORY</h3>
     <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p><h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+
+    <img class="blogPhoto" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-825250098-1521659264.jpg" style="width:45%">
+
+<br>
+    <h3 class="pTitle">WHY FLOATS ARE THE #1 MUST HAVE ITEM FOR SUMMER</h3>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+
+<img class="blogPhoto" src="https://sugarandcloth.com/wp-content/uploads/2016/03/MS4A1009-ForAmex.jpg">
+
+
+<h3 class="pTitle">WHY WE LOVE FLOATIES</h3>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+<img class="blogPhoto" src="https://ae01.alicdn.com/kf/HTB1cu0sQVXXXXXeXVXXq6xXFXXXZ/150CM-Party-Water-Rose-Gold-Giant-Inflatable-Flamingo-Pool-Float-Toy-Pink-Cute-Boia-Tube-Ride.jpg_640x640.jpg">
 
 <%for(let i = newPost.length-1; i < newPost.length;i++){ %>
-  <h3><%= newPost[newPost.length-1].story %><h3>
+  <h3><%= newPost[newPost.length-1].story %></h3>
   <% console.log(newPost[i].story) %>
 <% } %>
       <form action="/store/blog" method="POST">

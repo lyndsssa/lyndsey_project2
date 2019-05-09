@@ -6,17 +6,21 @@
 
     <title>store blog</title>
   </head>
-  <nav>
-    <a href="/store/">SHOP</a>
-    <a href="/store/blog">BLOG</a>
-    <a href="/store/new">CUSTOMIZE YOUR OWN</a>
-  </nav>
+  <ul>
+    <li><a href="/store/">SHOP</a></li>
+    <li><a href="/store/blog">BLOG</a></li>
+    <li><a href="/store/new">CUSTOMIZE YOUR OWN</a></li>
+  </ul>
+  
+  <img class="headPhoto" src="https://i.pinimg.com/originals/cb/f2/f5/cbf2f537ad7261f377e88c5d58dd0693.jpg">
   <body>
     <h1>YOUR ORDER</h1>
+    <div class="yourOrderForm">
     <%for(let i = newOrders.length-1; i < newOrders.length;i++){ %>
       <h3>Color choice: <%= newOrders[i].Color %><h3>
       <h3>Text on floaty: <%= newOrders[i].Text %><h3>
       <h3>Contact information: <%= newOrders[i].Email %><h3>
+        </div>
         <a href="/store/yourOrder/<%=newOrders[i]._id %>/edit">EDIT</a>
       <% console.log(newOrders[i].Color) %>
     <% } %>
