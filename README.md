@@ -7,7 +7,7 @@ https://tranquil-lake-59160.herokuapp.com/store
 
 ## DESCRIPTION
 
-OOTD is a full-stack web application that allows user to view Instagram Worthy pool floats with the price. When user clicks the image the description when clicked. Ability to read blog, add your own float story & remove it. User can create their own pool float. Option to edit their recent order & update.
+This is a full-stack web application that allows user to view Instagram Worthy pool floats with the price. When user clicks the image the description when clicked. Ability to read blog, add your own float story & remove it. User can create their own pool float. Option to edit their recent order & update.
 
 ## Technologies used
 INSTAGRAM pool floats app was built using Node.js, Express, Javascript, jQuery, Mongoose, bootstrap, CSS.
